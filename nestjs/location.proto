@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package location;
+
+service LocationService {
+  rpc GetLocation (LocationRequest) returns (LocationResponse);
+  rpc ListLocations (EmptyRequest) returns (LocationListResponse);
+}
+
+message LocationRequest {
+  string id = 1;
+}
+
+message EmptyRequest {}
+
+message LocationResponse {
+  string id = 1;
+  string name = 2;
+  double latitude = 3;
+  double longitude = 4;
+}
+
+message LocationListResponse {
+  repeated LocationResponse locations = 1;
+}
