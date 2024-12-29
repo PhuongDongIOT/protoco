@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "builder": {
+            "type": "swc",
+            "options": {
+                "swcrcPath": "infrastructure/.swcrc"
+            }
+        }
+    },
+    "watchOptions": {
+        "watchFile": "fixedPollingInterval"
+    }
+}

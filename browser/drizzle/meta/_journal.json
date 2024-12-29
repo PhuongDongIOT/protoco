@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1728369661177,
+      "tag": "0000_broad_crystal",
+      "breakpoints": true
+    }
+  ]
+}

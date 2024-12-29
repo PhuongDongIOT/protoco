@@ -1,0 +1,1108 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>nest-typescript-starter documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">nest-typescript-starter documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Classes</li>
+  <li class="breadcrumb-item" >SettingService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/shared/services/setting.service.ts</code>
+        </p>
+
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#get" >get</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getNumber" >getNumber</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#app" >app</a>
+                                </li>
+                                <li>
+                                    <a href="#apiPrefix" >apiPrefix</a>
+                                </li>
+                                <li>
+                                    <a href="#nodeEnv" >nodeEnv</a>
+                                </li>
+                                <li>
+                                    <a href="#throttlerConfig" >throttlerConfig</a>
+                                </li>
+                                <li>
+                                    <a href="#eventStoreConfig" >eventStoreConfig</a>
+                                </li>
+                                <li>
+                                    <a href="#winstonConfig" >winstonConfig</a>
+                                </li>
+                                <li>
+                                    <a href="#redis" >redis</a>
+                                </li>
+                                <li>
+                                    <a href="#newrelic" >newrelic</a>
+                                </li>
+                                <li>
+                                    <a href="#log" >log</a>
+                                </li>
+                                <li>
+                                    <a href="#headerKey" >headerKey</a>
+                                </li>
+                                <li>
+                                    <a href="#rateLimit" >rateLimit</a>
+                                </li>
+                                <li>
+                                    <a href="#awsS3Config" >awsS3Config</a>
+                                </li>
+                                <li>
+                                    <a href="#databaseKey" >databaseKey</a>
+                                </li>
+                                <li>
+                                    <a href="#swaggerConfig" >swaggerConfig</a>
+                                </li>
+                                <li>
+                                    <a href="#jwtConfig" >jwtConfig</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/shared/services/setting.service.ts:11</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>get</b></span>
+                        <a href="#get"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>get(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="26"
+                                    class="link-to-prism">src/shared/services/setting.service.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>key</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNumber"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>getNumber</b></span>
+                        <a href="#getNumber"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getNumber(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="30"
+                                    class="link-to-prism">src/shared/services/setting.service.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>key</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+            <section data-compodoc="block-accessors">
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="app"></a>
+                        <span class="name"><b>app</b><a href="#app"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>app()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/shared/services/setting.service.ts:34</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="apiPrefix"></a>
+                        <span class="name"><b>apiPrefix</b><a href="#apiPrefix"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>apiPrefix()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/shared/services/setting.service.ts:50</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nodeEnv"></a>
+                        <span class="name"><b>nodeEnv</b><a href="#nodeEnv"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>nodeEnv()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/shared/services/setting.service.ts:61</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="throttlerConfig"></a>
+                        <span class="name"><b>throttlerConfig</b><a href="#throttlerConfig"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>throttlerConfig()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/shared/services/setting.service.ts:65</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="eventStoreConfig"></a>
+                        <span class="name"><b>eventStoreConfig</b><a href="#eventStoreConfig"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>eventStoreConfig()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/shared/services/setting.service.ts:69</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="winstonConfig"></a>
+                        <span class="name"><b>winstonConfig</b><a href="#winstonConfig"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>winstonConfig()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/shared/services/setting.service.ts:96</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="redis"></a>
+                        <span class="name"><b>redis</b><a href="#redis"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>redis()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/shared/services/setting.service.ts:141</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newrelic"></a>
+                        <span class="name"><b>newrelic</b><a href="#newrelic"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>newrelic()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/shared/services/setting.service.ts:163</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="log"></a>
+                        <span class="name"><b>log</b><a href="#log"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>log()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/shared/services/setting.service.ts:190</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="headerKey"></a>
+                        <span class="name"><b>headerKey</b><a href="#headerKey"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>headerKey()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="209" class="link-to-prism">src/shared/services/setting.service.ts:209</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rateLimit"></a>
+                        <span class="name"><b>rateLimit</b><a href="#rateLimit"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>rateLimit()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="220" class="link-to-prism">src/shared/services/setting.service.ts:220</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="awsS3Config"></a>
+                        <span class="name"><b>awsS3Config</b><a href="#awsS3Config"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>awsS3Config()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="229" class="link-to-prism">src/shared/services/setting.service.ts:229</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="databaseKey"></a>
+                        <span class="name"><b>databaseKey</b><a href="#databaseKey"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>databaseKey()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="238" class="link-to-prism">src/shared/services/setting.service.ts:238</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="swaggerConfig"></a>
+                        <span class="name"><b>swaggerConfig</b><a href="#swaggerConfig"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>swaggerConfig()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="248" class="link-to-prism">src/shared/services/setting.service.ts:248</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="jwtConfig"></a>
+                        <span class="name"><b>jwtConfig</b><a href="#jwtConfig"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>jwtConfig()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="261" class="link-to-prism">src/shared/services/setting.service.ts:261</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import * as dotenv from &#x27;dotenv&#x27;;
+import * as winston from &#x27;winston&#x27;;
+import * as DailyRotateFile from &#x27;winston-daily-rotate-file&#x27;;
+import { LogLevel } from &#x27;@nestjs/common&#x27;;
+import * as fs from &#x27;fs&#x27;;
+import * as path from &#x27;path&#x27;;
+import { PoolConfig } from &#x27;pg&#x27;;
+import { IAwsConfig } from &#x27;@/core/interfaces/aws.interface&#x27;;
+import { ISwaggerConfigInterface } from &#x27;@/core/interfaces/swagger.interface&#x27;;
+
+export class SettingService {
+  constructor() {
+    dotenv.config({
+      path: &#x60;.env&#x60;,
+    });
+
+    // Replace \\n with \n to support multiline strings in AWS
+    for (const envName of Object.keys(process.env)) {
+      process.env[envName] &#x3D; process.env[envName].replace(/\\n/g, &#x27;\n&#x27;);
+    }
+    if (this.nodeEnv &#x3D;&#x3D;&#x3D; &#x27;development&#x27;) {
+      console.info(process.env);
+    }
+  }
+
+  public get(key: string): string {
+    return process.env[key];
+  }
+
+  public getNumber(key: string): number {
+    return Number(this.get(key));
+  }
+
+  get app() {
+    return {
+      name: this.get(&#x27;APP_NAME&#x27;),
+      env: this.nodeEnv,
+      version: this.get(&#x27;API_VERSION&#x27;),
+      versionDefault: this.get(&#x27;API_VERSION_DEFAULT&#x27;),
+      versionKey: this.get(&#x27;API_VERSION_KEY&#x27;) || &#x27;x-api-version&#x27;,
+      url: this.get(&#x27;API_URL&#x27;),
+      cors: this.get(&#x27;CORS&#x27;),
+      prefix: this.apiPrefix,
+      defaultLang: this.get(&#x27;APP_DEFAULT_LANG&#x27;) || &#x27;en&#x27;,
+      authorizationKey: this.get(&#x27;APP_AUTHORIZATION_KEY&#x27;) || &#x27;Authorization&#x27;,
+      timezone: this.get(&#x27;APP_TIMEZONE&#x27;) || &#x27;+07:00&#x27;,
+    };
+  }
+
+  get apiPrefix() {
+    let prefix &#x3D; this.get(&#x27;API_PREFIX&#x27;);
+    if (!prefix) {
+      prefix &#x3D; &#x27;&#x27;;
+    }
+    if (prefix &#x3D;&#x3D; &#x27;version&#x27;) {
+      prefix &#x3D; this.get(&#x27;API_VERSION&#x27;);
+    }
+    return prefix;
+  }
+
+  get nodeEnv(): string {
+    return this.get(&#x27;NODE_ENV&#x27;) || &#x27;development&#x27;;
+  }
+  
+  get throttlerConfig() {
+    return this.get(&#x27;NODE_ENV&#x27;) || &#x27;development&#x27;;
+  }
+
+  get eventStoreConfig() {
+    return {
+      protocol: this.get(&#x27;EVENT_STORE_PROTOCOL&#x27;) || &#x27;http&#x27;,
+      connectionSettings: {
+        defaultUserCredentials: {
+          username: this.get(&#x27;EVENT_STORE_CREDENTIALS_USERNAME&#x27;) || &#x27;admin&#x27;,
+          password: this.get(&#x27;EVENT_STORE_CREDENTIALS_PASSWORD&#x27;) || &#x27;changeit&#x27;,
+        },
+        verboseLogging: true,
+        failOnNoServerResponse: true,
+        // log: console, // TODO: improve Eventstore logger (separate chanel)
+      },
+      tcpEndpoint: {
+        host: this.get(&#x27;EVENT_STORE_HOSTNAME&#x27;) || &#x27;localhost&#x27;,
+        port: this.getNumber(&#x27;EVENT_STORE_TCP_PORT&#x27;) || 1113,
+      },
+      httpEndpoint: {
+        host: this.get(&#x27;EVENT_STORE_HOSTNAME&#x27;) || &#x27;localhost&#x27;,
+        port: this.getNumber(&#x27;EVENT_STORE_HTTP_PORT&#x27;) || 2113,
+      },
+      poolOptions: {
+        min: this.getNumber(&#x27;EVENT_STORE_POOLOPTIONS_MIN&#x27;) || 1,
+        max: this.getNumber(&#x27;EVENT_STORE_POOLOPTIONS_MAX&#x27;) || 10,
+      },
+    };
+  }
+
+  get winstonConfig(): winston.LoggerOptions {
+    const transports &#x3D; [
+      new DailyRotateFile({
+        level: &#x27;debug&#x27;,
+        filename: &#x60;./logs/${this.nodeEnv}/debug-%DATE%.log&#x60;,
+        datePattern: &#x27;YYYY-MM-DD&#x27;,
+        zippedArchive: true,
+        maxSize: &#x27;20m&#x27;,
+        maxFiles: &#x27;14d&#x27;,
+        format: winston.format.combine(
+          winston.format.timestamp(),
+          winston.format.json(),
+        ),
+      }),
+      new DailyRotateFile({
+        level: &#x27;error&#x27;,
+        filename: &#x60;./logs/${this.nodeEnv}/error-%DATE%.log&#x60;,
+        datePattern: &#x27;YYYY-MM-DD&#x27;,
+        zippedArchive: false,
+        maxSize: &#x27;20m&#x27;,
+        maxFiles: &#x27;30d&#x27;,
+        format: winston.format.combine(
+          winston.format.timestamp(),
+          winston.format.json(),
+        ),
+      }),
+      new winston.transports.Console({
+        level: &#x27;debug&#x27;,
+        handleExceptions: true,
+        format: winston.format.combine(
+          winston.format.colorize(),
+          winston.format.timestamp({
+            format: &#x27;DD-MM-YYYY HH:mm:ss&#x27;,
+          }),
+          winston.format.simple(),
+        ),
+      }),
+    ];
+
+    return {
+      transports,
+      exitOnError: false,
+    };
+  }
+
+  get redis() {
+    return {
+      host: this.get(&#x27;REDIS_HOST&#x27;) || &#x27;127.0.0.1&#x27;,
+      url: this.get(&#x27;REDIS_URL&#x27;),
+      port: this.get(&#x27;REDIS_PORT&#x27;) || &#x27;6379&#x27;,
+      password: this.get(&#x27;REDIS_PASSWORD&#x27;),
+      role: this.get(&#x27;REDIS_ROLE&#x27;),
+      user: this.get(&#x27;REDIS_USER&#x27;),
+      prefix: this.get(&#x27;REDIS_PREFIX&#x27;) || &#x27;nest_cache:&#x27;,
+      connectionName: this.get(&#x27;REDIS_CONNECTION_NAME&#x27;) || &#x27;NEST_CACHE&#x27;,
+      ttl: this.get(&#x27;REDIS_TTL&#x27;) || 3600,
+      cacheTTL: {
+        searchPlaceholder:
+          this.getNumber(&#x27;REDIS_CACHE_TTL_SEARCH_PLACEHOLDER&#x27;) || 86400,
+      },
+      enable: {
+        searchPlaceholder:
+          this.get(&#x27;REDIS_ENABLE_SEARCH_PLACEHOLDER&#x27;) &#x3D;&#x3D; &#x27;true&#x27; || false,
+      },
+    };
+  }
+
+  get newrelic() {
+    return {
+      enabled: this.get(&#x27;NEWRELIC_ENABLED&#x27;) &#x3D;&#x3D; &#x27;true&#x27; || false,
+      appName: this.get(&#x27;NEWRELIC_APP_NAME&#x27;) || this.get(&#x27;APP_NAME&#x27;),
+      licenseKey: this.get(&#x27;NEWRELIC_LICENSE_KEY&#x27;),
+      log: {
+        level: this.get(&#x27;NEWRELIC_LOG_LEVEL&#x27;),
+      },
+      distributeTracing: {
+        enabled:
+          this.get(&#x27;NEWRELIC_DISTRIBUTE_TRACING_ENABLED&#x27;) &#x3D;&#x3D; &#x27;true&#x27; || false,
+      },
+      transactionTracer: {
+        enabled: this.get(&#x27;NEWRELIC_TRANSACTION_ENABLED&#x27;) &#x3D;&#x3D; &#x27;true&#x27; || false,
+        recordSQL: this.get(&#x27;NEWRELIC_TRANSACTION_RECORD_SQL&#x27;),
+        explainThreshold: this.get(&#x27;NEWRELIC_TRANSACTION_EXPLAIN_THRESHOLD&#x27;),
+      },
+      slowSql: {
+        enabled: this.get(&#x27;NEWRELIC_SLOW_SQL_ENABLED&#x27;) &#x3D;&#x3D; &#x27;true&#x27; || false,
+        maxSamples: this.get(&#x27;NEWRELIC_SLOW_SQL_MAX_SAMPLES&#x27;),
+      },
+      blacklist: this.get(&#x27;NEWRELIC_BLACKLIST_ROUTES&#x27;)
+        ? this.get(&#x27;NEWRELIC_BLACKLIST_ROUTES&#x27;).split(&#x27;,&#x27;)
+        : [],
+    };
+  }
+
+  get log() {
+    let logLevels: LogLevel[] &#x3D; [&#x27;log&#x27;, &#x27;warn&#x27;, &#x27;error&#x27;, &#x27;verbose&#x27;, &#x27;debug&#x27;];
+    if (this.get(&#x27;LOG_LEVELS&#x27;)) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      logLevels &#x3D; this.get(&#x27;LOG_LEVELS&#x27;).split(&#x27;,&#x27;);
+    }
+
+    return {
+      enabled: this.get(&#x27;LOG_ENABLED&#x27;) &#x3D;&#x3D; &#x27;true&#x27; || false,
+      driver: this.get(&#x27;LOG_DRIVER&#x27;) || &#x27;google&#x27;,
+      name: this.get(&#x27;LOG_NAME&#x27;) || this.app.name,
+      levels: logLevels,
+      morgan: {
+        enabled: this.get(&#x27;LOG_MORGAN_ENABLED&#x27;) &#x3D;&#x3D; &#x27;true&#x27; || false,
+      },
+    };
+  }
+
+  get headerKey() {
+    return {
+      appVersion: this.get(&#x27;HEADER_APP_VERSION&#x27;) || &#x27;x-version&#x27;,
+      appPlatform: this.get(&#x27;HEADER_APP_DEVICE&#x27;) || &#x27;x-device&#x27;,
+      timezone: this.get(&#x27;HEADER_TIMEZONE&#x27;) || &#x27;x-timezone&#x27;,
+      lang: this.get(&#x27;HEADER_LANG&#x27;) || &#x27;x-lang&#x27;,
+      userId: this.get(&#x27;HEADER_USER_ID&#x27;) || &#x27;x-user-id&#x27;,
+      userUuid: this.get(&#x27;HEADER_USER_UUID&#x27;) || &#x27;x-user-uuid&#x27;,
+    };
+  }
+
+  get rateLimit() {
+    return {
+      enabled: this.get(&#x27;RATE_LIMIT_ENABLED&#x27;) &#x3D;&#x3D; &#x27;true&#x27; || false,
+      windowMs:
+        this.getNumber(&#x27;RATE_LIMIT_WINDOWMS&#x27;) * 60 * 1000 || 15 * 60 * 1000,
+      max: this.getNumber(&#x27;RATE_LIMIT_MAX&#x27;) || 300,
+    };
+  }
+
+  get awsS3Config(): IAwsConfig {
+    return {
+      accessKeyId: this.get(&#x27;AWS_S3_ACCESS_KEY_ID&#x27;),
+      secretAccessKey: this.get(&#x27;AWS_S3_SECRET_ACCESS_KEY&#x27;),
+      bucketName: this.get(&#x27;S3_BUCKET_NAME&#x27;),
+      publicUrl: this.get(&#x27;S3_PUBLIC_URL&#x27;),
+    };
+  }
+
+  get databaseKey() {
+    return {
+      host: this.get(&#x27;POSTGRES_HOST&#x27;),
+      port: Number(this.get(&#x27;POSTGRES_PORT&#x27;)),
+      user: this.get(&#x27;POSTGRES_USER&#x27;),
+      password: this.get(&#x27;POSTGRES_PASSWORD&#x27;),
+      database: this.get(&#x27;POSTGRES_DB&#x27;),
+    };
+  }
+  
+  get swaggerConfig(): ISwaggerConfigInterface {
+    return {
+      path: this.get(&#x27;SWAGGER_PATH&#x27;) || &#x27;/api/docs&#x27;,
+      title:
+        this.get(&#x27;SWAGGER_TITLE&#x27;) || &#x27;Talentclass API &#x27;,
+      description:
+        this.get(&#x27;SWAGGER_DESCRIPTION&#x27;) ||
+        &#x27;Talentclass API Documentation&#x27;,
+      version: this.get(&#x27;SWAGGER_VERSION&#x27;) || &#x27;0.0.1&#x27;,
+      scheme: this.get(&#x27;SWAGGER_SCHEME&#x27;) &#x3D;&#x3D;&#x3D; &#x27;https&#x27; ? &#x27;https&#x27; : &#x27;http&#x27;,
+    };
+  }
+
+  get jwtConfig() {
+    let privateKey &#x3D; null;
+    let publicKey &#x3D; null;
+
+    const privateKeyPath &#x3D; path.join(
+      __dirname,
+      &#x27;..&#x27;,
+      &#x27;certificates&#x27;,
+      &#x27;auth-rs256.key&#x27;,
+    );
+    const publicKeyPath &#x3D; path.join(
+      __dirname,
+      &#x27;..&#x27;,
+      &#x27;certificates&#x27;,
+      &#x27;auth-rs256.key.pub&#x27;,
+    );
+
+    if (fs.existsSync(privateKeyPath)) {
+      privateKey &#x3D; fs.readFileSync(privateKeyPath);
+    } else {
+      privateKey &#x3D; this.get(&#x27;JWT_TOKEN_SECRET_PRIVATE_KEY&#x27;);
+    }
+
+    if (fs.existsSync(publicKeyPath)) {
+      publicKey &#x3D; fs.readFileSync(publicKeyPath);
+    } else {
+      publicKey &#x3D; this.get(&#x27;JWT_TOKEN_SECRET_PUBLIC_KEY&#x27;);
+    }
+
+    return {
+      secretKey: this.get(&#x27;JWT_SECRET&#x27;) || &#x27;y0urS3cr3tz&#x27;,
+      refreshTokenSecret: this.get(&#x27;JWT_REFRESH_TOKEN_SECRET&#x27;) || &#x27;y0urS3cr3tz&#x27;,
+      expiresToken: this.get(&#x27;JWT_EXPIRES_TOKEN&#x27;) || &#x27;14d&#x27;,
+      expiresRefreshToken: this.get(&#x27;JWT_EXPIRES_REFRESH_TOKEN&#x27;) || &#x27;30d&#x27;,
+      privateKey,
+      publicKey,
+    };
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'SettingService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
