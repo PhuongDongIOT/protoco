@@ -1,0 +1,44 @@
+{
+    "version": 1,
+    "projects": {
+      "api": {
+        "root": "apps/api",
+        "sourceRoot": "apps/api/src",
+        "projectType": "application",
+        "architect": {
+          "build": {
+            "builder": "@nrwl/nest:build",
+            "options": {
+              "outputPath": "dist/apps/api"
+            }
+          },
+          "serve": {
+            "builder": "@nrwl/nest:serve",
+            "options": {
+              "buildTarget": "api:build"
+            }
+          }
+        }
+      },
+      "python-api": {
+        "root": "python-api",
+        "sourceRoot": "python-api",
+        "projectType": "application",
+        "architect": {
+          "start": {
+            "builder": "@nrwl/workspace:run-commands",
+            "options": {
+              "commands": [
+                {
+                  "command": "python python-api/app.py"
+                }
+              ],
+              "cwd": "python-api",
+              "parallel": false
+            }
+          }
+        }
+      }
+    }
+  }
+  
