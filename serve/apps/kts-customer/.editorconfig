@@ -1,0 +1,5 @@
+# .editorconfig
+root = true
+
+[*.{js,jsx,ts,tsx}]
+end_of_line = lf
